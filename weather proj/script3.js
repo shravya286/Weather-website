@@ -1,6 +1,5 @@
 const API_KEY = "0751599ed20d67e5e2ac43c8f7684fcf"; 
 
-// Elements
 const weatherIcon = document.querySelector(".weatherIcon");
 const temperature = document.querySelector(".temperature");
 const feelsLike = document.querySelector(".feelslike");
@@ -19,7 +18,6 @@ const PValue = document.getElementById("Pvalue");
 const forecastContainer = document.querySelector(".Forecast");
 const unitSelector = document.getElementById("converter");
 
-// Fetch weather data
 async function fetchWeather(city, units="metric") {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${units}`;
   const res = await fetch(url);
@@ -60,7 +58,6 @@ function displayWeather(data, units) {
   CValue.textContent = `${data.clouds.all}%`;
   PValue.textContent = `${data.main.pressure} hPa`;
   
-  // OpenWeather free API doesn't give UV index directly
   UValue.textContent = "N/A"; 
 }
 
@@ -91,7 +88,6 @@ function formatTime(unix) {
   return date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
 }
 
-// Search function
 function findUserLocation() {
   const city = document.getElementById("userlocation").value;
   const units = unitSelector.value;
@@ -100,7 +96,6 @@ function findUserLocation() {
   }
 }
 
-// Update when unit changes
 unitSelector.addEventListener("change", () => {
   const city = cityElem.textContent;
   if (city) fetchWeather(city, unitSelector.value);
