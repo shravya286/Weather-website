@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style3.css" />
+  <script defer src="script3.js"></script>
+  <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="container">
+
+    <!-- LEFT SECTION -->
+    <div class="weather-left">
+      <div class="input-group">
+        <input type="text" id="userlocation" placeholder="Search for places..." />
+        <select id="converter">
+          <option value="metric">°C</option>
+          <option value="imperial">°F</option>
+        </select>
+        <i class="fa fa-search" onclick="findUserLocation()"></i>
+      </div>
+
+      <div class="main-temp">
+        <img class="weatherIcon" src="" alt="Weather Icon" />
+        <h2 class="temperature"></h2>
+      </div>
+      <div class="feelslike"></div>
+      <div class="description"></div>
+      <div class="date-time date"></div>
+      <div class="city"></div>
+    </div>
+
+    <!-- RIGHT SECTION -->
+    <div class="weather-right">
+      <h2 class="heading">Today's Report</h2>
+      <div class="highlight">
+        <div class="humidity">
+          Humidity
+          <i class="fa-solid fa-water"></i>
+          <h1 id="Hvalue"></h1>
+        </div>
+        <div class="windspeed">
+          Wind Speed
+          <i class="fa-solid fa-wind"></i>
+          <h1 id="Wvalue"></h1>
+        </div>
+        <div class="sun">
+          <span>
+            <i class="fa-solid fa-sun sun-icon"></i>
+            <p><span id="SRValue"></span> Sunrise</p>
+          </span>
+          <span>
+            <i class="fa-regular fa-sun sun-icon"></i>
+            <p><span id="SSValue"></span> Sunset</p>
+          </span>
+        </div>
+        <div class="clouds">
+          Clouds
+          <i class="fa-solid fa-cloud"></i>
+          <h1 id="Cvalue"></h1>
+        </div>
+        <div class="uv-index">
+          UV Index
+          <i class="fa-solid fa-sun"></i>
+          <h1 id="Uvalue"></h1>
+        </div>
+        <div class="pressure">
+          Pressure
+          <i class="fa-solid fa-gauge pressure-icon"></i>
+          <h1 id="Pvalue"></h1>
+        </div>
+      </div>
+
+      <h2 class="heading">This Week</h2>
+      <div class="Forecast"></div>
+    </div>
+
+  </div>
+</body>
+</html>
