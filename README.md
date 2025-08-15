@@ -1,7 +1,7 @@
 # Weather-website
 Mini project of weather App
 
-# Weather App 🌦️
+# Weather Hunt 🌦️
 A responsive and interactive weather web application that provides real-time weather updates and a 5-day forecast using the OpenWeatherMap API. Users can search any city, view detailed weather information, and switch between Celsius (°C) and Fahrenheit (°F).
 
 #Features
